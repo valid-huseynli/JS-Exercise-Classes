@@ -41,7 +41,22 @@ class Airplane {
 */
 
 class Person {
-
+  constructor(name, age){
+    this.name =  name;
+    this.age = age;
+    this.stomach = [];
+  }
+  
+  eat(someFood){
+    if(this.stomach.length < 10) this.stomach.push(someFood);
+  }
+  poop(){
+    this.stomach = []
+  }
+  
+  toString(){
+    return `${this.name}, ${this.age}`
+  }
 }
 
 /*
@@ -153,4 +168,9 @@ if (typeof exports !== 'undefined') {
   if (Instructor) { module.exports.Instructor = Instructor }
   if (Student) { module.exports.Student = Student }
   if (ProjectManager) { module.exports.ProjectManager = ProjectManager }
+}
+
+for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  
 }
